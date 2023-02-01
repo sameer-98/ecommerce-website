@@ -3,8 +3,14 @@ import { CheckoutItemContainer,BaseSpan, Quantity, Value, Arrow, ImageContainer,
 import { addItemToCart, removeItemFromCart, clearItemFromCart } from "../../store/cart/cart.action";
 import { selectCartItems } from "../../store/cart/cart.selector";
 import { useDispatch, useSelector } from "react-redux";
+import { FC } from "react";
+import { CartItem } from "../../store/cart/cart.types";
 
-const ListItem = ({item}) => {
+type CheckoutListItemProp = {
+    item: CartItem;
+}
+
+const ListItem: FC<CheckoutListItemProp> = ({item}) => {
 
     const {name, quantity, price , imageUrl} = item;
 
