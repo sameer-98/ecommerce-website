@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { CartDropdownContainer, EmptyMessage, CartItems } from './cart-dropdown.styles';
@@ -19,10 +20,10 @@ const CartDropdown = () => {
 
     const navigate = useNavigate();
 
-    const goToCheckoutHandler = () => {
+    const goToCheckoutHandler = useCallback(() => {
         navigate('/checkout')
         dispatch(setIsCartOpen(!isCartOpen))
-    }
+    }, []);
 
     return(
         <CartDropdownContainer>

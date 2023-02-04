@@ -5,10 +5,11 @@ import { CategoryItem } from '../../store/categories/category.types';
 
 type CategoryPreviewProps = {
     title: string;
-    products: CategoryItem[]
+    products: CategoryItem[];
 }
 
 const CategoryPreview: FC<CategoryPreviewProps> = ({title, products}) => {
+    console.log(products)
     return (
         <CategoryPreviewContainer>
             <h2>

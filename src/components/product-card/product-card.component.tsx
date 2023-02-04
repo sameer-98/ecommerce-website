@@ -6,12 +6,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCartItems } from '../../store/cart/cart.selector';
 
 import { ProductCardContainer, Footer, Name, Price } from "./product-card.styles";
-import { CartItem } from '../../store/cart/cart.types';
 import { FC } from 'react';
+import { CategoryItem } from '../../store/categories/category.types';
 
 
 type ProductCardProps = {
-    product: CartItem
+    product: CategoryItem;
 }
 
 const ProductCard: FC<ProductCardProps> = ({product}) => {
